@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Presentation</title>
+  </head>
+  <body>
+    <!-- page 1 (Intro) -->
+    <section id="page-1" class="page">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ad
+        qui dolorem consectetur eos distinctio architecto similique quia magni,
+        officia unde maiores officiis sequi, odit facilis exercitationem facere
+        minus velit ex illo non consequuntur quo nam maxime! Nesciunt, officia
+        nihil!
+      </p>
+      <div>
+        <a href="#page-2" class="btn">
+          Next Page <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- page 2 -->
+    <section id="page-2" class="page">
+      <h1>Page 2</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ad
+        qui dolorem consectetur eos distinctio architecto similique quia magni,
+        officia unde maiores officiis sequi, odit facilis exercitationem facere
+        minus velit ex illo non consequuntur quo nam maxime! Nesciunt, officia
+        nihil!
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark">
+          Prev Page <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+        <a href="#page-3" class="btn">
+          Next Page <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- page 3 -->
+    <section id="page-3" class="page">
+      <h1>Page 3</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ad
+        qui dolorem consectetur eos distinctio architecto similique quia magni,
+        officia unde maiores officiis sequi, odit facilis exercitationem facere
+        minus velit ex illo non consequuntur quo nam maxime! Nesciunt, officia
+        nihil!
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark">
+          Prev Page <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+        <a href="#page-4" class="btn">
+          Next Page <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- page 4 -->
+    <section id="page-4" class="page">
+      <h1>Page 4</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ad
+        qui dolorem consectetur eos distinctio architecto similique quia magni,
+        officia unde maiores officiis sequi, odit facilis exercitationem facere
+        minus velit ex illo non consequuntur quo nam maxime! Nesciunt, officia
+        nihil!
+      </p>
+      <div>
+        <a href="#page-3" class="btn">
+          Prev Page <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Smooth Scrolling
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
